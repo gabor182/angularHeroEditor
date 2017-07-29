@@ -17,6 +17,7 @@
 .settings/
 *.sublime-workspace
 /.vs
+/.vs/*
 *.suo
 
 # IDE - VSCode
