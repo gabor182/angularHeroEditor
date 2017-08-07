@@ -10,6 +10,10 @@ import { DashboardComponent } from './dashboard.component';
 
 import { AppRoutingModule } from './app-routing.module'
 
+// Imports for loading & configuring the in-memory web api (needed because there is no real web api to call)
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+
 import { HeroService } from './hero.service';
 
 @NgModule({
@@ -23,6 +27,7 @@ import { HeroService } from './hero.service';
       BrowserModule,
       FormsModule,
       HttpModule,
+      InMemoryWebApiModule.forRoot(InMemoryDataService),
       AppRoutingModule
   ],
   providers: [HeroService],
